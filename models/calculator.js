@@ -14,7 +14,6 @@ function add(numbers) {
                 .map(d => d.slice(1, -1))                               // Remove the square brackets
                 .map(del => del.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) // Escape special regex characters in delimiters
                 .join('|');                                             // Combine into a single regex pattern (with OR)
-            console.log("delimiterExpression", delimiterExpression)
             delimiterExpression = new RegExp(delimiterExpression);
         } else {
             delimiterExpression = new RegExp(`[${delimiterSection}]`);  // For single character custom delimiters
