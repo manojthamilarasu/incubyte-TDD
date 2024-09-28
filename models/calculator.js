@@ -3,7 +3,14 @@ function add(numbers) {
         return 0;
     }
 
-    const numsArray = numbers.split(/[,\n]/).map(Number);
+    let delimiterExpression = /[,\n]/;
+    if (numbers.startsWith("//")) {
+        const numberSegment = numbers.split('\n');
+        delimiterExpression = new RegExp(`[${numberSegment[0].slice(2)}]`);
+        numbers = numberSegment[1];
+    }
+
+    const numsArray = numbers.split(delimiterExpression).map(Number);
     return numsArray.reduce((sum, num) => sum + num, 0);
 }
 
