@@ -1,0 +1,23 @@
+{
+  "name": "incubyte-tdd",
+  "version": "1.0.0",
+  "description": "incubyte",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manojthamilarasu/incubyte-TDD.git"
+  },
+  "author": "Manoj.T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manojthamilarasu/incubyte-TDD/issues"
+  },
+  "homepage": "https://github.com/manojthamilarasu/incubyte-TDD#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
